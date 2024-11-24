@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "204620828030",
+    "firebase_url": "https://shopelectronics-47a9f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "shopelectronics-47a9f",
+    "storage_bucket": "shopelectronics-47a9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204620828030:android:252cee1e063f48a537f72f",
+        "android_client_info": {
+          "package_name": "com.kubik.userappcourse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3niJagbEukmiTLDUBh6zHaILn2N3wU6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204620828030:android:42808369153acbcd37f72f",
+        "android_client_info": {
+          "package_name": "com.kubik.workerappcourse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3niJagbEukmiTLDUBh6zHaILn2N3wU6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

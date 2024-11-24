@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bottom_nav">#FF0B2F53</color>
+    <color name="item_adapter_background">#FF0B2F53</color>
+    <color name="item_adapter_background_down">#FFFFE47F</color>
+    <color name="base_background">#FF0E3B65</color>
+    <color name="text_bottom_nav_view">#DBEEFF</color>
+    <color name="icon_bottom_nav_view">#DBEEFF</color>
+    <color name="text_btn">#FFFFFFFF</color>
+    <color name="background_button">#FF0B2F53</color>
+    <color name="error_text">#E31425</color>
+</resources>

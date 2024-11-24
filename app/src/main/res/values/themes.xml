@@ -1,0 +1,92 @@
+<resources>
+
+    <style name="Base.Theme.UserAppCourse" parent="Theme.Material3.DayNight.NoActionBar"></style>
+
+    <style name="text_presentation">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/caveat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="baseEditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">@dimen/left_and_right_big_margin</item>
+        <item name="android:layout_marginEnd">@dimen/left_and_right_big_margin</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:inputType">text</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="profileText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/left_and_right_big_margin</item>
+        <item name="android:layout_marginEnd">@dimen/left_and_right_big_margin</item>
+        <item name="android:layout_marginTop">@dimen/big_margin</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="itemText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">@dimen/left_and_right_big_margin</item>
+        <item name="android:layout_marginEnd">@dimen/left_and_right_big_margin</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="base_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">@dimen/left_and_right_big_margin</item>
+        <item name="android:layout_marginEnd">@dimen/left_and_right_big_margin</item>
+        <item name="android:backgroundTint">@color/background_button</item>
+        <item name="android:textColor">@color/text_btn</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_back">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/img_btn_back</item>
+    </style>
+
+    <style name="button_clear">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/delete_basket</item>
+    </style>
+
+    <style name="search_view">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:background">@drawable/background_search_view</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="Theme.UserAppCourse" parent="Base.Theme.UserAppCourse" />
+</resources>

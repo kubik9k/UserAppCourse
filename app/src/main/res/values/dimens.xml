@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="left_and_right_big_margin">32dp</dimen>
+    <dimen name="height_item_adapter">136dp</dimen>
+    <dimen name="big_margin">36dp</dimen>
+</resources>

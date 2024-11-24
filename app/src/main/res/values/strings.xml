@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">UserAppCourse</string>
+    <string name="sign_in">Sign in</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_login">Enter login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="price">Price</string>
+    <string name="please_enter_login">Please enter login</string>
+    <string name="please_enter_password">please enter password</string>
+    <string name="data_entered_incorrectly">Data entered incorrectly</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="title_product">Title product</string>
+    <string name="count">Count</string>
+    <string name="save">Save</string>
+    <string name="status">Status</string>
+    <string name="on_assembly">On assembly</string>
+    <string name="ready_for_pickup">Ready for pickup</string>
+    <string name="item_received">Item received</string>
+    <string name="description_product">Description product</string>
+    <string name="toast_user_successful_register">user successful register</string>
+    <string name="toast_user_is_not_registered">User is not registered</string>
+    <string name="toast_user_data_successful_update">User successful update data</string>
+    <string name="toast_login_already_exists">Login already exists</string>
+    <string name="please_enter_last_name">Please enter last name</string>
+    <string name="please_enter_first_name">Please enter first name</string>
+    <string name="error_sending_data_to_server">Error sending data to server</string>
+    <string name="buy">Buy</string>
+    <string name="successful_buy_product">successful buy product</string>
+    <string name="left_in_stock">Left in stock</string>
+    <string name="not_available">Not available</string>
+    <string name="history">History</string>
+    <string name="exit">Exit</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="new_password">New password</string>
+</resources>
