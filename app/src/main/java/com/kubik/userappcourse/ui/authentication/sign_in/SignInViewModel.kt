@@ -10,7 +10,7 @@ import com.kubik.userappcourse.data.db.dao.DaoUser
 import com.kubik.userappcourse.domain.user.CheckSignInUserUseCase
 import com.kubik.userappcourse.domain.user.SignInUserUseCase
 import com.kubik.userappcourse.domain.user.UserRepository
-import com.kubik.userappcourse.ui.auntification.models.SignInUserModel
+import com.kubik.userappcourse.ui.authentication.models.SignInUserModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

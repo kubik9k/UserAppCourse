@@ -1,4 +1,4 @@
-package com.kubik.userappcourse.ui.auntification.models
+package com.kubik.userappcourse.ui.authentication.models
 
 import com.kubik.userappcourse.domain.models.SignInUserDomainModel
 

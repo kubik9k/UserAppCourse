@@ -12,7 +12,7 @@ import com.kubik.userappcourse.DependenciesDatabase
 import com.kubik.userappcourse.R
 import com.kubik.userappcourse.data.user_data.UserRepositoryImpl
 import com.kubik.userappcourse.databinding.FragmentSignInBinding
-import com.kubik.userappcourse.ui.auntification.models.SignInUserModel
+import com.kubik.userappcourse.ui.authentication.models.SignInUserModel
 import com.kubik.userappcourse.ui.authentication.AuthenticationActivity
 import com.kubik.userappcourse.ui.checkNotEmptyEditText
 import com.kubik.userappcourse.ui.hideKeyboard

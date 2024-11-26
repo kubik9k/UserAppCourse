@@ -16,13 +16,4 @@ class GetSubcategoryUseCase(private val categoryRepository: CategoryRepository) 
             }
         }
     }
-
-    suspend fun getNameSubcategory(context: Context, successful: (String) -> Unit) {
-        withContext(Dispatchers.Default) {
-            val numCategory = categoryRepository.getNumCategory(context)
-            val numSubcategory = categoryRepository.getNumSubcategory(context)
-            successful(categoryRepository.getNameSubcategory(numCategory, numSubcategory))
-        }
-    }
-
 }
