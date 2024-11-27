@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kubik.userappcourse.domain.user.SignUpUserUseCase
+import com.kubik.userappcourse.domain.user.SignOutUserUseCase
 import com.kubik.userappcourse.domain.user.UserRepository
 import com.kubik.userappcourse.ui.authentication.models.UserModel
 import kotlinx.coroutines.Dispatchers
@@ -19,7 +19,7 @@ class SignOutViewModel : ViewModel() {
 
     fun registerUser(user: UserModel, userRepository: UserRepository) {
         viewModelScope.launch(Dispatchers.IO) {
-            SignUpUserUseCase(userRepository).signUp(
+            SignOutUserUseCase(userRepository).signUp(
                 user = user.toUserDomainModel(),
                 resultUserSignIn = {
                     Handler(Looper.getMainLooper()).post{

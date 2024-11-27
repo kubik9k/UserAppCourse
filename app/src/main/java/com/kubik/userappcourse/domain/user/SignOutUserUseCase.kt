@@ -4,7 +4,7 @@ import com.kubik.userappcourse.domain.models.UserDomainModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class SignUpUserUseCase(private val userRepository: UserRepository) {
+class SignOutUserUseCase(private val userRepository: UserRepository) {
 
     suspend fun signUp(
         user: UserDomainModel,
