@@ -7,11 +7,11 @@ import com.kubik.userappcourse.data.models.SubcategoryDataModel
 internal class DataCategoryPreview {
 
     suspend fun getData() = listOf(
-        HomeDataModel("Beauty and health", R.drawable.home, "beauty_and_health"),
-        HomeDataModel("Home appliances", R.drawable.home, "home_appliances"),
-        HomeDataModel("Laptops and computers", R.drawable.home, "laptops_and_computers"),
-        HomeDataModel("Phone and gadgets", R.drawable.home, "phone_and_gadgets"),
-        HomeDataModel("TV and video", R.drawable.home, "tv_and_video"),
+        HomeDataModel("Beauty and health", R.drawable.beauty_and_health, "beauty_and_health"),
+        HomeDataModel("Home appliances", R.drawable.home_appliances, "home_appliances"),
+        HomeDataModel("Laptops and computers", R.drawable.laptops_and_computers, "laptops_and_computers"),
+        HomeDataModel("Phone and gadgets", R.drawable.phone_and_gadgets, "phone_and_gadgets"),
+        HomeDataModel("TV and video", R.drawable.tv_and_video, "tv_and_video"),
         //TODO: если необходимо будет то подгрузить из бд
     )
 
