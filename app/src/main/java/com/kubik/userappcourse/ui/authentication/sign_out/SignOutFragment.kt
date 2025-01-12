@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.kubik.userappcourse.R
 import com.kubik.userappcourse.data.user_data.UserRepositoryImpl
@@ -13,6 +14,9 @@ import com.kubik.userappcourse.databinding.FragmentSignOutBinding
 import com.kubik.userappcourse.ui.authentication.models.UserModel
 import com.kubik.userappcourse.ui.checkNotEmptyEditText
 import com.kubik.userappcourse.ui.showToast
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 class SignOutFragment : Fragment() {
 
@@ -36,19 +40,16 @@ class SignOutFragment : Fragment() {
 
     private fun initField() {
         val context = binding.root.context
-        viewModel.isSuccessfulSignUp.observeForever {
+        viewModel.isSuccessfulSignUp.filterNotNull().onEach {
             if (it) {
                 showToast(context, getString(R.string.toast_user_successful_register))
                 goToBackFragment()
-            } else {
-                showToast(context, getString(R.string.toast_user_is_not_registered))
-            }
-        }
-        viewModel.exitsLogin.observeForever {
-            if (it != 0) {
-                showToast(context, getString(R.string.toast_login_already_exists))
-            }
-        }
+            } else showToast(context, getString(R.string.toast_user_is_not_registered))
+        }.launchIn(lifecycleScope)
+
+        viewModel.exitsLogin.onEach {
+            if (it != 0) showToast(context, getString(R.string.toast_login_already_exists))
+        }.launchIn(lifecycleScope)
     }
 
     private fun initView() {

@@ -70,10 +70,12 @@ class UserRepositoryImpl : UserRepository {
         }
     }
 
-    override suspend fun checkSaveLocalData(daoUser: DaoUser, successful: (Boolean) -> Unit) {
-        withContext(Dispatchers.Default) {
-            RepositoryDatabaseUser(daoUser).getSizeTable {
-                successful(it > 0)
+    override suspend fun checkSaveLocalData(daoUser: DaoUser): Boolean {
+        return suspendCoroutine { continuation ->
+            runBlocking(Dispatchers.IO) {
+                RepositoryDatabaseUser(daoUser).getSizeTable {
+                    continuation.resume(it > 0)
+                }
             }
         }
     }

@@ -21,7 +21,7 @@ interface UserRepository {
 
     suspend fun saveUserDataLocalDb(user: UserDataModel, daoUser: DaoUser)
 
-    suspend fun checkSaveLocalData(daoUser: DaoUser, successful: (Boolean) -> Unit)
+    suspend fun checkSaveLocalData(daoUser: DaoUser): Boolean
 
     suspend fun getUserDataLocalDb(daoUser: DaoUser): UserDomainModel
 

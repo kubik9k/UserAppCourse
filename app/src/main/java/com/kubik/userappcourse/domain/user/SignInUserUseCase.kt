@@ -11,23 +11,21 @@ class SignInUserUseCase(private val userRepository: UserRepository) {
     suspend fun signIn(
         data: SignInUserDomainModel,
         daoUser: DaoUser,
-        successful: (Boolean) -> Unit,
-    ) {
+    ): Boolean {
         return withContext(Dispatchers.Default) {
-            val user = userRepository.signInUser(data.toDataModel())
-            if (user.login == "") {
-                successful(false)
-            } else {
-                Log.d("MyLog", "SignInUserUseCase: user: ${user}")
-                try {
+            try {
+                val user = userRepository.signInUser(data.toDataModel())
+                if (user.login.isEmpty()) {
+                    return@withContext false
+                } else {
+                    Log.d("MyLog", "SignInUserUseCase: user: $user")
                     userRepository.saveUserDataLocalDb(user.toDataUserModel(), daoUser)
-                    successful(true)
                     Log.d("MyLog", "SignInUserUseCase: return true")
-                } catch (e: Exception) {
-                    Log.e("MyLog", "SignInUserUseCase: ${e.message}")
-                    successful(false)
-                    Log.d("MyLog", "SignInUserUseCase: return false")
+                    true
                 }
+            } catch (e: Exception) {
+                Log.e("MyLog", "SignInUserUseCase: ${e.message}")
+                false
             }
         }
     }
