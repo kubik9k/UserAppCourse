@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.kubik.userappcourse.DependenciesDatabase
 import com.kubik.userappcourse.R
@@ -17,6 +18,8 @@ import com.kubik.userappcourse.ui.authentication.AuthenticationActivity
 import com.kubik.userappcourse.ui.checkNotEmptyEditText
 import com.kubik.userappcourse.ui.hideKeyboard
 import com.kubik.userappcourse.ui.showToast
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 
 class SignInFragment : Fragment() {
@@ -69,7 +72,7 @@ class SignInFragment : Fragment() {
     }
 
     private fun initField() {
-        viewModel.isSuccessfulSignIn.observeForever {
+        viewModel.isSuccessfulSignIn.onEach {
             binding.apply {
                 loading.visibility = View.GONE
                 if (it) goToMainAct()
@@ -78,12 +81,11 @@ class SignInFragment : Fragment() {
                     editTextEnterPassword.setText("")
                 }
             }
-        }
-        viewModel.isSignIn.observeForever {
-            if (it) {
-                goToMainAct()
-            } else setViewNotLoading()
-        }
+        }.launchIn(lifecycleScope)
+        viewModel.isSignIn.onEach {
+            if (it) goToMainAct()
+            else setViewNotLoading()
+        }.launchIn(lifecycleScope)
     }
 
     private fun initView() {

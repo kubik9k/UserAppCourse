@@ -6,11 +6,9 @@ import kotlinx.coroutines.withContext
 
 class CheckSignInUserUseCase(private val userRepository: UserRepository) {
 
-    suspend fun checkSignIn(daoUser: DaoUser, successful: (Boolean) -> Unit) {
-        withContext(Dispatchers.Default) {
-            userRepository.checkSaveLocalData(daoUser) {
-                successful(it)
-            }
+    suspend fun checkSignIn(daoUser: DaoUser): Boolean {
+        return withContext(Dispatchers.Default) {
+            return@withContext userRepository.checkSaveLocalData(daoUser)
         }
     }
 

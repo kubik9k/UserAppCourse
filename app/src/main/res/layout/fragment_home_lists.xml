@@ -51,9 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subcategory_recycler_view"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_cart_product">
-
-    </androidx.recyclerview.widget.RecyclerView>
+        tools:listitem="@layout/item_cart_product"/>
 
     <ProgressBar
         android:id="@+id/loading"
